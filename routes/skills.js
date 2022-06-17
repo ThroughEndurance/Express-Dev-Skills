@@ -12,7 +12,10 @@ router.get('/', skillsCtrl.index);
 router.get('/new', skillsCtrl.new);
 //get skills/:id
 router.get('/:id', skillsCtrl.show);
-// this is our index route
-router.get('/', skillsCtrl.index);
+//post the new skill
+router.post('/', skillsCtrl.create);
+// deletes the skill we want
+router.delete('/:id', skillsCtrl.delete);
+
 
 module.exports = router;
